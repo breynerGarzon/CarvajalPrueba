@@ -15,7 +15,7 @@ namespace Carvajal.Prueba.Test.TestByCRUDUSER
 
         public void InicializeOptions()
         {
-            var appSettings = new Settings() { ConnectionString = "Data Source=DESKTOP-27EFGNJ\\SQLEXPRESS;Initial Catalog=Carvajal.Prueba2;Integrated Security=False;User ID=sa;Password=manager;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" };
+            var appSettings = new Settings() { ConnectionString = "Data Source=NOMBRESERVIDOR;Initial Catalog=Carvajal.Prueba;Integrated Security=False;User ID=USUARIOBD;Password=CONTRASEÑA_BD;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" };
             Options = Microsoft.Extensions.Options.Options.Create(appSettings);
         }
         [Theory]
