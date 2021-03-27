@@ -19,4 +19,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Carvajal.Prueba.Helper\Carvajal.Prueba.Helper.csproj" />
+    <ProjectReference Include="..\Carvajal.Prueba.Data\Carvajal.Prueba.Data.csproj" />
+    <ProjectReference Include="..\Carvajal.Prueba.Model\Carvajal.Prueba.Model.csproj" />
+    <ProjectReference Include="..\Carvajal.Prueba.Business\Carvajal.Prueba.Business.csproj" />
+  </ItemGroup>
+
 </Project>

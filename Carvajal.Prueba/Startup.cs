@@ -1,3 +1,4 @@
+using Carvajal.Prueba.Extension;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -22,6 +23,7 @@ namespace Carvajal.Prueba
         {
 
             services.AddControllersWithViews();
+            services.ConfigureBusinessServices();
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

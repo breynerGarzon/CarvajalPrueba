@@ -20,6 +20,13 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Carvajal.Prueba.Business\Carvajal.Prueba.Business.csproj" />
+    <ProjectReference Include="..\Carvajal.Prueba.Data\Carvajal.Prueba.Data.csproj" />
+    <ProjectReference Include="..\Carvajal.Prueba.Helper\Carvajal.Prueba.Helper.csproj" />
+    <ProjectReference Include="..\Carvajal.Prueba.Model\Carvajal.Prueba.Model.csproj" />
+  </ItemGroup>
+
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
