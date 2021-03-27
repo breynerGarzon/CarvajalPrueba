@@ -4,6 +4,6 @@ namespace Carvajal.Prueba.Business.Interface
 {
     public interface ILoginBusinessServices
     {
-        string LogIn(LoginView dataLog);
+        LoginReponseView LogIn(LoginView dataLog);
     }
 }

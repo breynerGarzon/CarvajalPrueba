@@ -1,8 +1,7 @@
 using Carvajal.Prueba.Extension;
+using Carvajal.Prueba.Model.View;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,8 +20,10 @@ namespace Carvajal.Prueba
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            var appSettings = Configuration.GetSection("AppSettings");
+            services.Configure<Settings>(appSettings);
             services.AddControllersWithViews();
+            services.ConfigureBusinessContext(Configuration);
             services.ConfigureBusinessServices();
 
             // In production, the React files will be served from this directory
@@ -65,7 +66,7 @@ namespace Carvajal.Prueba
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
+                    // spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
         }

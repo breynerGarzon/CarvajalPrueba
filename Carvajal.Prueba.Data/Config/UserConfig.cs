@@ -20,7 +20,7 @@ namespace Carvajal.Prueba.Data.Config
 
         private string GetId()
         {
-            return new Guid().ToString();
+            return Guid.NewGuid().ToString();
         }
     }
 }

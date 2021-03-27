@@ -3,11 +3,10 @@
   <ItemGroup>
     <ProjectReference Include="..\Carvajal.Prueba.Data\Carvajal.Prueba.Data.csproj" />
     <ProjectReference Include="..\Carvajal.Prueba.Helper\Carvajal.Prueba.Helper.csproj" />
-    <ProjectReference Include="..\Carvajal.Prueba.Model\Carvajal.Prueba.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -24,19 +24,29 @@ namespace Carvajal.Prueba.Data.Services
         public string Execute()
         {
             DynamicParameters parameters = this.InicializeParameter(this.Parameter);
-            using (IDbConnection db = new SqlConnection(this.ConnectionString))
+            using (var connection = new SqlConnection(this.ConnectionString))
             {
-                var customer = db.Query<UserView>(this.SpName, this.Parameter).ToString();
-                return customer;
+                connection.Open();
+                int affectedRows = connection.Execute(this.SpName, parameters, commandType: CommandType.StoredProcedure);
+                return affectedRows.ToString();
             }
+
         }
 
         public IEnumerable<T> Get()
         {
-            List<T> users = new List<T>();
             using (IDbConnection db = new SqlConnection(this.ConnectionString))
             {
-                var customer = db.Query<T>(this.SpName, this.Parameter).ToList();
+                var customer = db.Query<T>(this.SpName, this.Parameter);
+                return customer;
+            }
+        }
+
+        public IEnumerable<T> GetWithOutParameters()
+        {
+            using (IDbConnection db = new SqlConnection(this.ConnectionString))
+            {
+                var customer = db.Query<T>(this.SpName).ToList();
                 return customer;
             }
         }

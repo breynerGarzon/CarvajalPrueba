@@ -1,8 +1,8 @@
 namespace Carvajal.Prueba.Model.View
 {
-    public class DocumentView
+    public class LoginReponseView
     {
-        public int Id { get; set; }
+        public bool Status { get; set; }
         public string Description { get; set; }
     }
 }

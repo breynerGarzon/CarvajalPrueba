@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Carvajal.Prueba.Migration
+namespace Carvajal.Prueba.MigrationSQLSERVER
 {
     public class Class1
     {

@@ -1,0 +1,1 @@
+dotnet ef migrations add --context CarvajalContext --project ..\Carvajal.Prueba.MigrationSQLSERVER\Carvajal.Prueba.MigrationSQLSERVER.csproj CreacionBd

@@ -7,6 +7,7 @@ namespace Carvajal.Prueba.Data.Interfaces
     {
         string Execute();
         IEnumerable<T> Get();
+        IEnumerable<T> GetWithOutParameters();
         DynamicParameters InicializeParameter(Dictionary<string, string> parameter);
     }
 }

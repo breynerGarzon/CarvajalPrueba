@@ -13,6 +13,9 @@ namespace Carvajal.Prueba.Controllers
             this._documentTypeBusiness = documentTypeBusiness;
         }
 
+        /// <summary>
+        /// Api rest para la consulta de los tipos de documento que estan registrados en el sistema.
+        /// </summary> 
         [HttpGet("[action]")]
         public IActionResult Documents()
         {

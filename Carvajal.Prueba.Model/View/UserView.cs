@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+// using System.ComponentModel.DataAnnotations;
 
 namespace Carvajal.Prueba.Model.View
 {
@@ -7,9 +7,9 @@ namespace Carvajal.Prueba.Model.View
         
         public string Name { get; set; }
         public string LastName { get; set; }
-        public string IdType { get; set; }
+        public int DocumentType { get; set; }
         public string DocumentNumber { get; set; }
-        [Required]
+        // [Required]
         // [Range(0D, (double)1, ErrorMessage = "La contraseñadebe de poseer una mínima cantidad de 8 carácteres.")]
         public string Password { get; set; }
 
